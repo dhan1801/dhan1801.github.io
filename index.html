@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhanvika Nakka – Software Engineer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;600&display=swap">
+<style>
+:root{--sky1:#2f4a9e;--sky2:#8fb8ea;--stone:#eadcc8;--stone2:#c9b79d;--ink:#0d0e13;--ink2:#171923;--text:#e9e8e3;--mute:#9a9ba6;--lime:#d9e24b;
+--serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:90px;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font:300 17px/1.7 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+nav{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:4px;padding:6px;border-radius:99px;background:rgba(13,14,19,.72);backdrop-filter:blur(12px);max-width:calc(100% - 20px);overflow-x:auto}
+nav a{padding:8px 16px;border-radius:99px;text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+nav a.on{color:var(--lime)}
+/* hero */
+.hero{position:relative;height:100vh;min-height:620px;overflow:hidden;background:radial-gradient(120% 80% at 50% 100%,#2a1f3d,#12142b 55%,#07080f)}
+.hero svg{position:absolute;left:-5%;width:110%;height:100%;bottom:0;transition:transform .5s ease-out}
+.bk{position:absolute;border-radius:50%;filter:blur(6px);opacity:.5;animation:tw 6s ease-in-out infinite alternate;pointer-events:none}
+@keyframes tw{to{opacity:.15;transform:translateY(-14px)}}
+.fade{position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(transparent,var(--ink))}
+.hero h1{position:absolute;z-index:2;top:30%;width:100%;margin:0;text-align:center;font:400 clamp(52px,11vw,160px)/.95 var(--serif);color:#fff;text-shadow:0 4px 40px rgba(20,35,90,.45)}
+.hero p{position:absolute;z-index:2;top:calc(30% + clamp(90px,13vw,190px));left:50%;transform:translateX(-50%);width:min(780px,100%);padding:0 24px;margin:0;text-align:center;font:italic 400 clamp(22px,3.4vw,40px)/1.25 var(--serif);color:var(--text)}
+.hero .rise{will-change:transform}
+.roles{display:block;margin-top:18px;font:300 15px/1.5 var(--sans);font-style:normal;letter-spacing:.05em;color:var(--mute)}
+.hero .rise{animation:rise 1.6s .1s both cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}}
+/* sections */
+section{padding:120px 24px;max-width:1100px;margin:0 auto}
+.about{text-align:center;max-width:760px}
+.about h2{font:400 clamp(32px,5vw,52px)/1.15 var(--serif);margin:0 0 28px}
+.about p{color:var(--mute);margin:0 0 18px}
+.marq{overflow:hidden;border-block:1px solid #262833;padding:26px 0;max-width:none}
+.marq div{display:flex;gap:64px;width:max-content;animation:m 30s linear infinite;font:400 34px var(--serif);color:var(--mute)}
+@keyframes m{to{transform:translateX(-50%)}}
+h2.t{font:400 clamp(34px,5vw,56px)/1.1 var(--serif);margin:0 0 48px}
+.work{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:48px}
+.work ul{list-style:none;margin:0;padding:0}
+.work button{all:unset;cursor:pointer;display:block;width:100%;padding:12px 0;color:var(--mute);font-size:19px;transition:color .2s}
+.work button[aria-selected=true]{color:var(--text);font-weight:600}
+.work button[aria-selected=true]::before{content:"";display:inline-block;width:10px;height:10px;margin-right:12px;background:var(--lime)}
+.panel h3{font:400 38px/1.15 var(--serif);margin:0 0 6px}
+.panel .tech{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0 0 24px}
+.panel li{margin-bottom:12px}
+.panel a{display:inline-block;margin-top:14px;padding:10px 22px;border-radius:99px;background:var(--lime);color:var(--ink);text-decoration:none;font-weight:600}
+.panel{animation:fi .35s}
+@keyframes fi{from{opacity:0}}
+.rows{display:grid;gap:36px 48px;grid-template-columns:1fr 1fr}
+.rows h3{font:400 26px/1.2 var(--serif);margin:0}
+.rows small{display:block;color:var(--mute);margin:2px 0 8px}
+.rows p{margin:0;font-size:15px}
+.lime{max-width:none;background:var(--lime);color:var(--ink);text-align:center;padding:110px 24px}
+.lime h2{font:400 clamp(44px,9vw,120px)/1 var(--serif);margin:0 0 28px}
+.lime a{font-size:22px;font-weight:600;margin:0 14px}
+footer{padding:28px;text-align:center;color:var(--mute);font-size:13px}
+@media(max-width:760px){.work,.rows{grid-template-columns:1fr}.work ul{display:flex;flex-wrap:wrap;gap:4px 20px}nav a{padding:8px 11px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Sections">
+<a href="#top" class="on">Home</a><a href="#about">About</a><a href="#work">Projects</a><a href="#path">Path</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+<svg id="far" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+<svg id="mid" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+<div id="bokeh" aria-hidden="true"></div>
+<svg id="near" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+<h1 class="rise">Dhanvika Nakka</h1>
+<p class="rise">Code is my paint. I love where creativity and technology fuse.<span class="roles">Open to software engineering, game development and project management roles</span></p>
+<div class="fade"></div>
+</header>
+
+<section class="about" id="about">
+<h2>From login screens to VR worlds, I build things that turn imagination into reality.</h2>
+<p>I'm a Computer Science graduate from UMass Lowell (B.S., GPA 3.856, Dean's List) based in Hyderabad. I care about code that is rigorous and well structured, and about what people see and feel when they use it. That shows in an Android portal, a VR game, a puzzle game and an encryption tool, built in C++, Java, C# and SQL.</p>
+<p>I work well in teams: my projects were built in groups of 3 to 5, and I've handled workshop logistics from attendance to certification. I'm a member of the Game Development Club and available to join immediately for fresher and internship roles in software engineering, game development and project management.</p>
+</section>
+
+<section class="marq" aria-label="Skills"><div id="marq"></div></section>
+
+<section id="work">
+<h2 class="t">Projects</h2>
+<div class="work">
+<ul role="tablist" id="tabs"></ul>
+<div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="path">
+<h2 class="t">Path so far</h2>
+<div class="rows">
+<div><h3>BS, Computer Science</h3><small>UMass Lowell · Graduated May 2026</small><p>GPA 3.856/4.0 and Dean's List in Fall 2025. Coursework: data structures and algorithms, DBMS, operating systems, software engineering, OOP.</p></div>
+<div><h3>Workshop facilitator and Zoom host</h3><small>HackersUnskool · May–Oct 2024</small><p>Hosted and moderated an ethical hacking course, explained technical ideas to non-technical participants, and ran attendance and certification.</p></div>
+<div><h3>Student worker, food service and catering</h3><small>Tsongas Center, UMass Lowell · May 2025–May 2026</small><p>Served at high-volume events while studying full time.</p></div>
+<div><h3>Social media support</h3><small>Llama Bee · Feb–Oct 2024</small><p>Scheduled content, managed community interactions and reviewed posts for consistency.</p></div>
+<div><h3>Ethical Hacking Workshop Certificate</h3><small>Remarkskill Education with Elan &amp; nvision, IIT Hyderabad · 13–14 April 2024</small><p>Completed a two-day technical workshop on ethical hacking at IIT Hyderabad.</p></div>
+</div>
+</section>
+
+<section class="lime" id="contact">
+<h2>Let's build something.</h2>
+<a href="https://github.com/dhan1801/Resume/blob/main/Dhanvika_Nakka_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+<a href="mailto:nakkadhanvika5@gmail.com">Email</a>
+<a href="https://linkedin.com/in/dhan1801" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/dhan1801" target="_blank" rel="noopener">GitHub</a>
+</section>
+<footer>© 2026 Dhanvika Nakka · Hyderabad, India</footer>
+
+<script>
+// pillars
+const NS="http://www.w3.org/2000/svg";
+function el(p,t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+const WC=["#ffc46b","#ffb347","#ffd98e","#ff7eb6","#6bb8ff"];
+function pillar(s,x,w,top,fill,lit){
+  el(s,"rect",{x:x,y:top,width:w,height:700-top,fill:fill});
+  for(let y=top+10;y<690;y+=13)for(let c=x+5;c<x+w-6;c+=11)if(r()<lit)el(s,"rect",{x:c,y:y,width:5,height:6,fill:WC[r()<.9?Math.floor(r()*3):3+Math.floor(r()*2)],opacity:.4+r()*.5});
+}
+let seed=7;const r=()=>(seed=(seed*9301+49297)%233280)/233280;
+[["far",22,40,80,"#1a1f3f",.12],["mid",12,70,120,"#10132a",.2],["near",6,110,170,"#07080f",.28]].forEach(([id,n,w,w2,f,lit],i)=>{
+  const s=document.getElementById(id);
+  for(let k=0;k<n;k++){const x=(k+r()*.6)*1200/n-10,ww=w+r()*(w2-w),top=330+r()*140+i*55;pillar(s,x,ww,top,f,lit)}
+});
+const bc=["#ffb347","#ffc46b","#ff7eb6","#6bb8ff","#ffd98e"],bh=document.getElementById("bokeh");
+for(let i=0;i<30;i++){const d=document.createElement("i"),z=14+r()*70;d.className="bk";d.style.cssText=`width:${z}px;height:${z}px;left:${r()*100}%;top:${48+r()*50}%;background:${bc[Math.floor(r()*5)]};animation-delay:-${r()*6}s;animation-duration:${4+r()*6}s;filter:blur(${z>50?10:5}px)`;bh.appendChild(d)}
+// mouse parallax
+const hero=document.querySelector(".hero");
+addEventListener("pointermove",e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
+  [["far",10],["mid",24],["near",44]].forEach(([id,d])=>document.getElementById(id).style.transform=`translate(${-x*d}px,${-y*d/2}px)`)});
+// marquee
+const skills=["C++","Java","C#","SQL","PHP","Unity","Android","SFML","Boost.Test","Git","Linux","Python","C"];
+document.getElementById("marq").innerHTML=[...skills,...skills].map(s=>`<span>${s}</span>`).join("");
+// projects
+const P=[
+{n:"Student Portal",t:"Software engineering · Android · Java · PHP · SQL",l:"https://github.com/dhan1801/Student-Portal",b:["Built an Android student portal with a 3-person team, adding accounts and threaded discussions to the database schema.","Wrote the discussion board create, read, update and delete operations.","Built a transcript module that computes GPA and credits and shows “Evaluation Required” in place of a grade until the course evaluation is submitted."]},
+{n:"Robots 2026 (VR)",t:"Game development · Unity · C# · XR Toolkit",l:"https://github.com/dhan1801/Robots-2026",b:["A 5-person VR game with ray interactors and win and lose scene transitions.","Added a tablet lock so players must interact with all 4 robots before answering.","Wrote the 5 quiz questions and the opinion each robot gives when selected. Demonstrated the game in class."]},
+{n:"FibLFSR Image Encryption",t:"Software engineering · C++ · SFML · Boost.Test",l:"https://github.com/dhan1801/FibLFSR-PhotoMagic",b:["Encrypts images with a 16-bit Fibonacci LFSR, XORing each pixel's RGB values with generated bits.","Supports password-derived seeds and validates the LFSR with Boost unit tests.","Shows the original and transformed images in separate SFML windows and saves the output."]},
+{n:"Sokoban",t:"Game development · C++ · SFML",l:"https://github.com/dhan1801/Sokoban",b:["Implemented movement, collision detection and undo/redo using data structures and state tracking.","Loads six levels from text files and plays a victory sound on a win."]}];
+const tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
+function show(i){[...tabs.children].forEach((li,j)=>li.firstChild.setAttribute("aria-selected",i==j));
+  const p=P[i];panel.style.animation="none";panel.offsetWidth;panel.style.animation="";
+  panel.innerHTML=`<h3>${p.n}</h3><p class="tech">${p.t}</p><ul style="padding-left:18px">${p.b.map(x=>`<li>${x}</li>`).join("")}</ul><a href="${p.l}" target="_blank" rel="noopener">View on GitHub</a>`}
+P.forEach((p,i)=>{const li=document.createElement("li"),b=document.createElement("button");b.setAttribute("role","tab");b.tabIndex=0;b.textContent=p.n;
+  b.onclick=()=>show(i);b.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();show(i)}};li.appendChild(b);tabs.appendChild(li)});
+show(0);
+// nav highlight
+const links=[...document.querySelectorAll("nav a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+["top","about","work","path","contact"].forEach(id=>io.observe(document.getElementById(id)));
+</script>
+</body>
+</html>
